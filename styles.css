@@ -1,0 +1,87 @@
+/* Reset some default styles */
+body, h1 {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the logo container */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Style the image to be circular and responsive */
+.logo img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Add hover effect */
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Center the heading content */
+.heading {
+  text-align: center;
+  margin-top: 1px;
+}
+
+/* Style the heading */
+.heading h1 {
+  font-size: 2.5em;
+  color: #000000;
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+}
+
+/* Center the intro content */
+.intro {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.5em;
+  color: #ebdd1b;
+}
+
+/* Style the anchor tag in the intro class */
+.intro a {
+  color: inherit; /* This will make the link color the same as the text color */
+  text-decoration: none; /* Removes the underline */
+  font-weight: bold; /* Makes the link text bold */
+}
+
+/* Optional: Add a hover effect */
+.intro a:hover {
+  color: #ebdd1b; /* Changes color on hover */
+}
+
+/* Optional: Style visited links */
+.intro a:visited {
+  color: #032b83; /* Keeps the color consistent for visited links */
+}
+
+/* Center the intro content */
+.about {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 2em;
+  color: #333;
+}
+
+/* Set a solid background color */
+body {
+  background-color: #7e7a8a; /* Light gray background */
+}
+
+/* Center the container content */
+.container {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.5em;
+}
