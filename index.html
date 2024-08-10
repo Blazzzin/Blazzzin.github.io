@@ -1,27 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <title>Home Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Home Page</title>
 </head>
+<link rel="icon", href="logo.png">
 <body>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="vertical-menu" id="verticalMenu">
+        <a href="./" class="active"><b>Home</b></a>
+        <a href="#"><b>Experience</b></a>
+        <a href="projects.html"><b>Projects</b></a>
+        <a href="#"><b>2048</b></a>
+        <a href="#"><b>Something</b></a>
+        <a href="https://github.com/Blazzzin" target="_blank">Github</a>
+    </div>
+    <br><br><br>
     <div class="logo">
-        <img src="Pic.jpeg" alt="Picture">
+        <img src="Pic.jpeg" alt="Profile Picture">
     </div>
     <div class="container">
         Hello! I Am
     </div>
     <div class="heading">
-        <h1><center>SYED SAHEER MULTANI</center></h1>
+        <h1>SAHEER MULTANI</h1>
     </div>
     <div class="intro">
-        Software Engineering Student at <a href="https://www.torontomu.ca/" target="_blank">Toronto Metropolitan University</a>
+        Software Engineering Student at <a href="https://www.torontomu.ca/engineering-architectural-science/" target="_blank">Toronto Metropolitan University</a>
     </div>
     <div class="about">
-        <br>
-        About Me:
+        ABOUT ME:
     </div>
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById('verticalMenu');
+        var toggle = document.querySelector('.menu-toggle');
+        if (menu.classList.contains('open')) {
+          menu.classList.remove('open');
+          menu.style.transform = 'translateX(-100%)'; // Hide menu
+          toggle.style.display = 'block'; // Show toggle button
+        } else {
+          menu.classList.add('open');
+          menu.style.transform = 'translateX(0%)'; // Show menu
+          toggle.style.display = 'none'; // Hide toggle button
+        }
+      }
+
+      // Close menu if clicking outside
+      document.addEventListener('click', function(event) {
+        var menu = document.getElementById('verticalMenu');
+        var toggle = document.querySelector('.menu-toggle');
+        var target = event.target;
+        if (!menu.contains(target) && !toggle.contains(target) && menu.classList.contains('open')) {
+          toggleMenu(); // Close the menu
+        }
+      });
+    </script>
 </body>
 </html>

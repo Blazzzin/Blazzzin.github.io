@@ -1,8 +1,14 @@
-/* Reset some default styles */
+/* Reset default styles */
 body, h1 {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+}
+
+/* Set a solid background color */
+body {
+  background-color: #7e7a8a; /* Light gray background */
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Style the logo container */
@@ -11,15 +17,24 @@ body, h1 {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  position: relative;
+  animation-name: left-to-right;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes left-to-right {
+  0% {left: -200px}
+  40% {left: 0px}
 }
 
 /* Style the image to be circular and responsive */
 .logo img {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -28,60 +43,122 @@ body, h1 {
   transform: scale(1.1);
 }
 
-/* Center the heading content */
-.heading {
-  text-align: center;
-  margin-top: 1px;
-}
-
-/* Style the heading */
-.heading h1 {
-  font-size: 2.5em;
-  color: #000000;
-  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
-}
-
-/* Center the intro content */
-.intro {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 1.5em;
-  color: #ebdd1b;
-}
-
-/* Style the anchor tag in the intro class */
-.intro a {
-  color: inherit; /* This will make the link color the same as the text color */
-  text-decoration: none; /* Removes the underline */
-  font-weight: bold; /* Makes the link text bold */
-}
-
-/* Optional: Add a hover effect */
-.intro a:hover {
-  color: #ebdd1b; /* Changes color on hover */
-}
-
-/* Optional: Style visited links */
-.intro a:visited {
-  color: #032b83; /* Keeps the color consistent for visited links */
-}
-
-/* Center the intro content */
-.about {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 2em;
-  color: #333;
-}
-
-/* Set a solid background color */
-body {
-  background-color: #7e7a8a; /* Light gray background */
-}
-
 /* Center the container content */
 .container {
   text-align: center;
   margin-top: 15px;
   font-size: 1.5em;
+  color: #ebdd1b;
+  position: relative;
+  animation-name: left-to-right;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+/* Center the heading content */
+.heading {
+  text-align: center;
+  margin-top: 5px;
+  position: relative;
+  animation-name: left-to-right;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+/* Style the heading */
+.heading h1 {
+  font-size: 2.5em;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Softer shadow for readability */
+}
+
+/* Center the intro content */
+.intro {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.5em;
+  color: #ebdd1b;
+  position: relative;
+  animation-name: left-to-right;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+/* Style the anchor tag in the intro class */
+.intro a {
+  color: inherit; /* Link inherits text color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.intro a:hover {
+  color: #ffffff; /* Changes color on hover */
+}
+
+.intro a:visited {
+  color: #ffcc00; /* Different color for visited links */
+}
+
+/* About section */
+.about {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2em;
+  color: #f4f4f4;
+  position: relative;
+  animation-name: left-to-right;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+/* Style the vertical menu */
+.vertical-menu {
+  position: fixed; /* Fixes the menu to the top-left corner */
+  top: 0; /* Distance from the top */
+  left: 0; /* Distance from the left */
+  width: 250px; /* Set a width for the menu */
+  height: 100%; /* Full height of the viewport */
+  background-color: #333; /* Dark background for the menu */
+  border-right: 2px solid #444; /* Subtle border on the right */
+  transform: translateX(-100%); /* Hide off-screen initially */
+  transition: transform 0.3s ease; /* Smooth slide-in effect */
+  z-index: 1000; /* Ensure the menu is above other content */
+}
+
+/* Style individual links in the menu */
+.vertical-menu a {
+  background-color: #eee; /* Grey background color */
+  color: black; /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+  border-bottom: 1px solid #ddd; /* Subtle separator between links */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Change background color on hover */
+.vertical-menu a:hover {
+  background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+/* Highlight the active link */
+.vertical-menu a.active {
+  background-color: #04AA6D; /* Green color for the active link */
+  color: white; /* White text for active link */
+}
+
+/* Style for menu toggle button */
+.menu-toggle {
+  position: fixed; /* Fixes the button to the top-left corner */
+  top: 20px; /* Distance from the top */
+  left: 20px; /* Distance from the left */
+  font-size: 24px; /* Size of the toggle icon */
+  cursor: pointer; /* Pointer cursor on hover */
+  color: #ffffff; /* Color of the toggle icon */
+  z-index: 1001; /* Ensure the toggle is above other content */
+}
+
+/* Hide menu toggle when menu is open */
+.vertical-menu.open + .menu-toggle {
+  display: none;
 }
