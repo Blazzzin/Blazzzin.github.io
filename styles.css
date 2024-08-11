@@ -24,7 +24,7 @@ body {
 }
 
 @keyframes left-to-right {
-  0% {left: -200px}
+  0% {left: -300px}
   40% {left: 0px}
 }
 
@@ -69,7 +69,7 @@ body {
 .heading h1 {
   font-size: 2.5em;
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Softer shadow for readability */
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); /* Softer shadow for readability */
 }
 
 /* Center the intro content */
@@ -113,6 +113,9 @@ body {
 
 /* Style the vertical menu */
 .vertical-menu {
+  display: flex; /* Enable flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-between; /* Space between top and bottom items */
   position: fixed; /* Fixes the menu to the top-left corner */
   top: 0; /* Distance from the top */
   left: 0; /* Distance from the left */
@@ -125,6 +128,12 @@ body {
   z-index: 1000; /* Ensure the menu is above other content */
 }
 
+/* Style the navigation links container */
+.nav-links {
+  display: flex; /* Enable flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+}
+
 /* Style individual links in the menu */
 .vertical-menu a {
   background-color: #eee; /* Grey background color */
@@ -132,8 +141,8 @@ body {
   display: block; /* Make the links appear below each other */
   padding: 12px; /* Add some padding */
   text-decoration: none; /* Remove underline from links */
-  border-bottom: 1px solid #ddd; /* Subtle separator between links */
-  transition: background-color 0.3s; /* Smooth transition for background color */
+  border-bottom: 1px solid #797979; /* Subtle separator between links */
+  transition: background-color 1s; /* Smooth transition for background color */
 }
 
 /* Change background color on hover */
@@ -147,12 +156,35 @@ body {
   color: white; /* White text for active link */
 }
 
+/* Style for the social links container */
+.social-links {
+  display: flex; /* Enable flexbox layout */
+  justify-content: center; /* Center align the items horizontally */
+  gap: 10px; /* Space between icons */
+  padding: 10px; /* Padding around the container */
+  margin-top: auto; /* Push social links to the bottom */
+  border-top: 1px solid #444; /* Optional: Adds a border above the social links */
+}
+
+/* Style for the GitHub and LinkedIn links */
+.github-link, .linkedin-link {
+  background-color: transparent; /* Make background transparent */
+  border: none; /* Remove border */
+  padding: 0; /* Remove padding */
+}
+
+/* Style the GitHub and LinkedIn logo images */
+.github-link img, .linkedin-link img {
+  width: 25px; /* Set a fixed width */
+  height: auto; /* Maintain aspect ratio */
+}
+
 /* Style for menu toggle button */
 .menu-toggle {
   position: fixed; /* Fixes the button to the top-left corner */
   top: 20px; /* Distance from the top */
   left: 20px; /* Distance from the left */
-  font-size: 24px; /* Size of the toggle icon */
+  font-size: 30px; /* Size of the toggle icon */
   cursor: pointer; /* Pointer cursor on hover */
   color: #ffffff; /* Color of the toggle icon */
   z-index: 1001; /* Ensure the toggle is above other content */
