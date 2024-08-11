@@ -182,8 +182,8 @@ body {
 /* Style for menu toggle button */
 .menu-toggle {
   position: fixed; /* Fixes the button to the top-left corner */
-  top: 20px; /* Distance from the top */
-  left: 20px; /* Distance from the left */
+  top: 15px; /* Distance from the top */
+  left: 15px; /* Distance from the left */
   font-size: 30px; /* Size of the toggle icon */
   cursor: pointer; /* Pointer cursor on hover */
   color: #ffffff; /* Color of the toggle icon */
