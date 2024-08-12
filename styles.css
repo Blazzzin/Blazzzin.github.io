@@ -194,3 +194,49 @@ body {
 .vertical-menu.open + .menu-toggle {
   display: none;
 }
+
+.jobtitle1 {
+  margin-left: 300px;
+  color: #ffffff;
+  font-size: 1.5em;
+  position: relative;
+}
+
+.company {
+  display: block;
+  margin-top: 5px;
+  margin-left: 300px;
+  font-size: 1em;
+  color: #ffcc00;
+  position: relative;
+}
+
+.company a {
+  color: inherit; /* Link inherits text color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.company a:hover {
+  color: #ffffff; /* Changes color on hover */
+}
+
+.company a:visited {
+  color: #ffcc00; /* Different color for visited links */
+}
+
+.timeframe {
+  display: block;
+  margin-top: 5px;
+  margin-left: 300px;
+  color: #000000;
+}
+
+.jobdescription1 {
+  margin-top: 10px;
+  font-size: 17px;
+  margin-left: 300px;
+  color: #000000;
+  position: relative;
+  line-height: 1.5;
+}
