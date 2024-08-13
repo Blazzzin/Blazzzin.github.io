@@ -195,8 +195,9 @@ body {
   display: none;
 }
 
-.jobtitle1 {
+.jobtitle, .end {
   margin-left: 300px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #ffffff;
   font-size: 1.5em;
   position: relative;
@@ -204,6 +205,7 @@ body {
 
 .company {
   display: block;
+  font-family: 'Times New Roman', Times, serif;
   margin-top: 5px;
   margin-left: 300px;
   font-size: 1em;
@@ -227,6 +229,7 @@ body {
 
 .timeframe {
   display: block;
+  font-family: 'Times New Roman', Times, serif;
   margin-top: 5px;
   margin-left: 300px;
   color: #000000;
@@ -235,8 +238,42 @@ body {
 .jobdescription1 {
   margin-top: 10px;
   font-size: 17px;
+  font-family: 'Courier New', Courier, monospace;
   margin-left: 300px;
   color: #000000;
   position: relative;
   line-height: 1.5;
+}
+
+/* Define the keyframes for sequential dot appearance */
+@keyframes dot-appear {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Style for the container of the dots */
+.animation-dots {
+  display: inline-block;
+  font-size: 1.5em; /* Adjust size as needed */
+}
+
+/* Style each dot and apply the animation with different delays */
+.dot {
+  display: inline-block;
+  opacity: 0;
+  animation: dot-appear 3.5s infinite; /* Repeat infinitely */
+}
+
+/* Apply delays to create the sequential effect */
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 1s; /* Adjust delay as needed */
+}
+
+.dot:nth-child(3) {
+  animation-delay: 2s; /* Adjust delay as needed */
 }
