@@ -24,8 +24,8 @@ body {
 }
 
 @keyframes left-to-right {
-  0% {left: -300px}
-  40% {left: 0px}
+  0% { left: -300px }
+  40% { left: 0px }
 }
 
 /* Style the image to be circular and responsive */
@@ -276,4 +276,56 @@ body {
 
 .dot:nth-child(3) {
   animation-delay: 2s; /* Adjust delay as needed */
+}
+
+/* Media query for screens 768px and smaller (tablets and mobile devices) */
+@media (max-width: 768px) {
+  .vertical-menu {
+    width: 200px; /* Adjust menu width */
+    transform: translateX(-100%); /* Hide menu by default */
+  }
+
+  .vertical-menu.open {
+    transform: translateX(0); /* Show menu when open */
+  }
+
+  .menu-toggle {
+    display: block; /* Ensure toggle is visible */
+  }
+
+  .jobtitle, .company, .timeframe, .jobdescription1, .end {
+    margin-left: 0; /* Remove left margin for smaller screens */
+    text-align: center; /* Center text */
+  }
+
+  .jobtitle {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+  }
+
+  .company, .timeframe {
+    font-size: 0.9em; /* Adjust font size */
+  }
+
+  .jobdescription1 {
+    font-size: 0.9em; /* Adjust font size */
+  }
+}
+
+/* Media query for screens 480px and smaller (mobile devices) */
+@media (max-width: 480px) {
+  .vertical-menu {
+    width: 100%; /* Full width for mobile */
+  }
+
+  .menu-toggle {
+    font-size: 24px; /* Smaller toggle icon */
+  }
+
+  .jobtitle, .company, .timeframe, .jobdescription1, .end {
+    font-size: 1em; /* Adjust font size */
+  }
+
+  .jobdescription1 {
+    line-height: 1.4; /* Adjust line height */
+  }
 }
