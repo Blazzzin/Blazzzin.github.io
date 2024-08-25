@@ -205,7 +205,7 @@ body {
 
 .company {
   display: block;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-top: 5px;
   margin-left: 300px;
   font-size: 1em;
@@ -229,7 +229,7 @@ body {
 
 .timeframe {
   display: block;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-top: 5px;
   margin-left: 300px;
   color: #000000;
@@ -239,7 +239,7 @@ body {
   margin-top: 10px;
   font-size: 17px;
   font-family: 'Courier New', Courier, monospace;
-  margin-left: 300px;
+  margin-left: 0px;
   color: #000000;
   position: relative;
   line-height: 1.5;
