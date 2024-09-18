@@ -7,58 +7,54 @@
     <title>Projects Page</title>
     <link rel="icon" href="logo.png">
 </head>
-<body>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<body class="projects-page">
     <div class="vertical-menu" id="verticalMenu">
         <div class="nav-links">
             <a href="./"><b>Home</b></a>
             <a href="experience.html"><b>Experience</b></a>
-            <a href="projects.html" class="active"><b>Projects</b></a>
+            <a href="projects.html" class="active"><b>Projects - Work In Progress</b></a>
             <a href="Resume.pdf" target="_blank"><b>Resume</b></a>
-            <a href="2048.html"><b>2048</b></a>
+            <a href="2048.html"><b>2048 - Work In Progress</b></a>
         </div>
         <div class="social-links">
             <a href="https://github.com/Blazzzin" target="_blank" class="github-link">
-                <img src="github_logo.png" alt="Github">
+                <img src="Images\github_logo.png" alt="Github">
             </a>
             <a href="https://www.linkedin.com/in/saheermultani/" target="_blank" class="linkedin-link">
-                <img src="linkedin_logo.png" alt="LinkedIn">
+                <img src="Images\linkedin_logo.png" alt="LinkedIn">
             </a>
         </div>
     </div>
-    <div class="details">
-        <center>
-            <details open>
-                <summary><center>Detail 1</center></summary>
-                TEST
-            </details>
-        </center>
+    <div class="dropdown">
+        <img src="Images\banking_app.jpg" alt="bankingApp" width="auto" height="auto">
+        <div class="dropdown-content">
+            <div class="projName">Banking Application</div>
+            <div class="desc">
+                • Developed a bank application using Java and Object Oriented Principles that has two user types, Manager and
+                Customer <br>
+                • Implemented manager/customer login authentication using Abstraction <br>
+                • Developed a GUI for easy access using JavaFX <br>
+                • A Customer can perform various tasks such as login, logout, deposit, withdrawal, online purchase(s), etc. <br>
+                • A Manager can perform tasks such as login, logout, add customer, delete customer, etc. <br><br>
+            </div>        
+        </div>
     </div>
+    <div class="dropdown2">
+        <img src="Images\gpu.jpg" alt="GPU" width="auto" height="auto">
+        <div class="dropdown-content">
+            <div class="projName">General Processing Unit</div>
+            <div class="desc">
+                • Developed a bank application using Java and Object Oriented Principles that has two user types, Manager and
+                Customer <br>
+                • Implemented manager/customer login authentication using Abstraction <br>
+                • Developed a GUI for easy access using JavaFX <br>
+                • A Customer can perform various tasks such as login, logout, deposit, withdrawal, online purchase(s), etc. <br>
+                • A Manager can perform tasks such as login, logout, add customer, delete customer, etc. <br><br>
+            </div>        
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById('verticalMenu');
-            var toggle = document.querySelector('.menu-toggle');
-            if (menu.classList.contains('open')) {
-                menu.classList.remove('open');
-                menu.style.transform = 'translateX(-100%)'; // Hide menu
-                toggle.style.display = 'block'; // Show toggle button
-            } else {
-                menu.classList.add('open');
-                menu.style.transform = 'translateX(0%)'; // Show menu
-                toggle.style.display = 'none'; // Hide toggle button
-            }
-        }
-
-        // Close menu if clicking outside
-        document.addEventListener('click', function(event) {
-            var menu = document.getElementById('verticalMenu');
-            var toggle = document.querySelector('.menu-toggle');
-            var target = event.target;
-            if (!menu.contains(target) && !toggle.contains(target) && menu.classList.contains('open')) {
-                toggleMenu(); // Close the menu
-            }
-        });
-
         // Highlight the active link
         document.addEventListener('DOMContentLoaded', function() {
             var navLinks = document.querySelectorAll('.nav-links a');

@@ -7,42 +7,66 @@
     <title>Experience Page</title>
     <link rel="icon" href="logo.png">
 </head>
-<body>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<body class="experience-page">
     <div class="vertical-menu" id="verticalMenu">
         <div class="nav-links">
             <a href="./"><b>Home</b></a>
             <a href="experience.html" class="active"><b>Experience</b></a>
-            <a href="projects.html"><b>Projects</b></a>
+            <a href="projects.html"><b>Projects - Work In Progress</b></a>
             <a href="Resume.pdf" target="_blank"><b>Resume</b></a>
-            <a href="2048.html"><b>2048</b></a>
+            <a href="2048.html"><b>2048 - Work In Progress</b></a>
         </div>
         <div class="social-links">
             <a href="https://github.com/Blazzzin" target="_blank" class="github-link">
-                <img src="github_logo.png" alt="Github">
+                <img src="Images\github_logo.png" alt="Github">
             </a>
             <a href="https://www.linkedin.com/in/saheermultani/" target="_blank" class="linkedin-link">
-                <img src="linkedin_logo.png" alt="LinkedIn">
+                <img src="Images\linkedin_logo.png" alt="LinkedIn">
             </a>
         </div>
     </div>
-    <div class="jobtitle">
+
+    <div class="animated-dots-container">
         <span class="animation-dots">
-            <span class="dot">.</span>
-            <span class="dot">.</span>
-            <span class="dot">.</span>
+            <span class="dot"><b>.</b></span>
+            <span class="dot"><b>.</b></span>
+            <span class="dot"><b>.</b></span>
         </span>
-        <br>
-        ------------------------------------------------------------------------------------------------------------------- <br>
-        <b>BIM 360 SOFTWARE DEVELOPER</b>
+    </div>
+    <div class="end">
+        -------------------------------------------------------------------------------------------------------------------
+    </div>
+    <div class="jobtitle">
+        <b>REGISTRARIAL SERVICES STUDENT AMBASSADOR</b>
+    </div>
+    <div class="company-logo">
+        <img src="Images\tmu.png" alt="company-logo">
     </div>
     <label class="company">
-        <a href="https://www.loblaw.ca/" target="_blank">LOBLAW COMPANIES LIMITED</a> | INTERNSHIP | BRAMPTON, ONTARIO
+        <!-- <a href="https://www.torontomu.ca/" target="_blank">TORONTO METROPOLITAN UNIVERSITY</a> |  -->
+        CONTRACT PART-TIME | TORONTO, ONTARIO
     </label>
     <label class="timeframe">
-        <b>
-            MAY 2024 - AUGUST 2024
-        </b> 
+        <b>SEPTEMBER 2024 - PRESENT</b>
+    </label>
+    <div class="jobdescription1">
+        • COMING SOON
+    </div>
+    <div class="end">
+        -------------------------------------------------------------------------------------------------------------------
+    </div>
+    <div class="jobtitle">
+        <b>BIM 360 SOFTWARE DEVELOPER</b>
+    </div>
+    <div class="company-logo2">
+        <img src="Images\loblaw.jpg" alt="company-logo2">
+    </div>
+    <label class="company">
+        <!-- <a href="https://www.loblaw.ca/" target="_blank">LOBLAW COMPANIES LIMITED</a> |  -->
+        INTERNSHIP | BRAMPTON, ONTARIO
+    </label>
+    <label class="timeframe">
+        <b>MAY 2024 - AUGUST 2024</b>
     </label>
     <div class="jobdescription1">
         • Developed a full-stack integration using Node.js and Express.js for Autodesk BIM 360, <br>enabling seamless addition of up to 425+ users to a project with a frontend with HTML/CSS <br>
@@ -52,57 +76,36 @@
         • Developed tools to automate workflows and streamline Smartsheet formulas and processes <br>
         • Conducted detailed audits of store plans to ensure accuracy in shelving arrangements, door models, <br>office item specifications, and other critical elements <br>
     </div>
-    
     <div class="end">
         -------------------------------------------------------------------------------------------------------------------
     </div>
     <div class="jobtitle">
         <b>GENERAL MERCHANDISE AND GROCERY CLERK</b>
     </div>
+    <div class="company-logo2">
+        <img src="Images\loblaw.jpg" alt="company-logo2">
+    </div>
     <label class="company">
-        <a href="https://www.loblaw.ca/" target="_blank">LOBLAW COMPANIES LIMITED</a> | THE REAL CANADIAN WHOLESALE CLUB | MISSISSAUGA, ONTARIO
+        <!-- <a href="https://www.loblaw.ca/" target="_blank">LOBLAW COMPANIES LIMITED</a> -  -->
+        <a href="https://www.wholesaleclub.ca/" target="_blank">THE REAL CANADIAN WHOLESALE CLUB</a> | PERMANENT PART-TIME | MISSISSAUGA, ONTARIO
     </label>
     <label class="timeframe">
-        <b>
-            JULY 2022 - JULY 2024
-        </b> 
+        <b>JULY 2022 - JULY 2024</b>
     </label>
     <div class="jobdescription1">
-        • Provided great customer service by ensuring the store shelves are stocked and by responding to customer needs <br>
+        • Provided great customer service by providing to any customers needs <br>
+        • Ensured store shelves are stocked organized <br>
         • Maintained and stocked product displays and shelves that meet company standards <br>
         • Ensured accurate product scanning, identified inventory needs and assisted with ordering <br>
         • Setup company-directed promotions and programs <br>
         • Kept department areas neat and ensured health and safety standards <br>
-        • Operated a power jack and pump jack with certification <nr></nr>
+        • Operated a power jack and pump jack with certification <br>
     </div>
     <div class="end">
         -------------------------------------------------------------------------------------------------------------------
     </div>
+    <br><br><br><br>
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById('verticalMenu');
-            var toggle = document.querySelector('.menu-toggle');
-            if (menu.classList.contains('open')) {
-                menu.classList.remove('open');
-                menu.style.transform = 'translateX(-100%)'; // Hide menu
-                toggle.style.display = 'block'; // Show toggle button
-            } else {
-                menu.classList.add('open');
-                menu.style.transform = 'translateX(0%)'; // Show menu
-                toggle.style.display = 'none'; // Hide toggle button
-            }
-        }
-
-        // Close menu if clicking outside
-        document.addEventListener('click', function(event) {
-            var menu = document.getElementById('verticalMenu');
-            var toggle = document.querySelector('.menu-toggle');
-            var target = event.target;
-            if (!menu.contains(target) && !toggle.contains(target) && menu.classList.contains('open')) {
-                toggleMenu(); // Close the menu
-            }
-        });
-
         // Highlight the active link
         document.addEventListener('DOMContentLoaded', function() {
             var navLinks = document.querySelectorAll('.nav-links a');

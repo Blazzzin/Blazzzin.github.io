@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Projects Page</title>
+    <link rel="icon" href="logo.png">
+</head>
+<body class="game-page">
+    <div class="vertical-menu" id="verticalMenu">
+        <div class="nav-links">
+            <a href="./"><b>Home</b></a>
+            <a href="experience.html"><b>Experience</b></a>
+            <a href="projects.html" class="active"><b>Projects - Work In Progress</b></a>
+            <a href="Resume.pdf" target="_blank"><b>Resume</b></a>
+            <a href="2048.html"><b>2048 - Work In Progress</b></a>
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/Blazzzin" target="_blank" class="github-link">
+                <img src="github_logo.png" alt="Github">
+            </a>
+            <a href="https://www.linkedin.com/in/saheermultani/" target="_blank" class="linkedin-link">
+                <img src="linkedin_logo.png" alt="LinkedIn">
+            </a>
+        </div>
+    </div>
+    <script>
+        // Highlight the active link
+        document.addEventListener('DOMContentLoaded', function() {
+            var navLinks = document.querySelectorAll('.nav-links a');
+            var currentPath = window.location.pathname.split('/').pop();
+            navLinks.forEach(function(link) {
+                var linkPath = link.getAttribute('href').split('/').pop();
+                if (currentPath === linkPath) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
