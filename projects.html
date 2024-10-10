@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,16 @@
     <title>Projects Page</title>
     <link rel="icon" href="logo.png">
 </head>
+
 <body class="projects-page">
-    <div class="vertical-menu" id="verticalMenu">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav class="vertical-menu" id="verticalMenu">
         <div class="nav-links">
-            <a href="./"><b>Home</b></a>
+            <a href="./" class="active"><b>Home</b></a>
             <a href="experience.html"><b>Experience</b></a>
-            <a href="projects.html" class="active"><b>Projects - Work In Progress</b></a>
+            <a href="projects.html"><b>Projects</b></a>
             <a href="Resume.pdf" target="_blank"><b>Resume</b></a>
-            <a href="2048.html"><b>2048 - Work In Progress</b></a>
+            <a href="2048.html"><b>Games</b></a>
         </div>
         <div class="social-links">
             <a href="https://github.com/Blazzzin" target="_blank" class="github-link">
@@ -24,19 +27,21 @@
                 <img src="Images\linkedin_logo.png" alt="LinkedIn">
             </a>
         </div>
-    </div>
+    </nav>
     <div class="dropdown">
         <img src="Images\banking_app.jpg" alt="bankingApp" width="auto" height="auto">
         <div class="dropdown-content">
             <div class="projName">Banking Application</div>
             <div class="desc">
-                • Developed a bank application using Java and Object Oriented Principles that has two user types, Manager and
+                • Developed a bank application using Java and Object Oriented Principles that has two user types,
+                Manager and
                 Customer <br>
                 • Implemented manager/customer login authentication using Abstraction <br>
                 • Developed a GUI for easy access using JavaFX <br>
-                • A Customer can perform various tasks such as login, logout, deposit, withdrawal, online purchase(s), etc. <br>
+                • A Customer can perform various tasks such as login, logout, deposit, withdrawal, online purchase(s),
+                etc. <br>
                 • A Manager can perform tasks such as login, logout, add customer, delete customer, etc. <br><br>
-            </div>        
+            </div>
         </div>
     </div>
     <div class="dropdown2">
@@ -44,30 +49,85 @@
         <div class="dropdown-content">
             <div class="projName">General Processing Unit</div>
             <div class="desc">
-                • Developed a bank application using Java and Object Oriented Principles that has two user types, Manager and
+                • Developed a bank application using Java and Object Oriented Principles that has two user types,
+                Manager and
                 Customer <br>
                 • Implemented manager/customer login authentication using Abstraction <br>
                 • Developed a GUI for easy access using JavaFX <br>
-                • A Customer can perform various tasks such as login, logout, deposit, withdrawal, online purchase(s), etc. <br>
+                • A Customer can perform various tasks such as login, logout, deposit, withdrawal, online purchase(s),
+                etc. <br>
                 • A Manager can perform tasks such as login, logout, add customer, delete customer, etc. <br><br>
-            </div>        
+            </div>
         </div>
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <script>
+        function toggleMenu() {
+            var menu = document.getElementById('verticalMenu');
+            var toggle = document.querySelector('.menu-toggle');
+            if (menu.classList.contains('open')) {
+                menu.classList.remove('open');
+                menu.style.transform = 'translateX(-100%)'; // Hide menu
+                toggle.style.display = 'block'; // Show toggle button
+            } else {
+                menu.classList.add('open');
+                menu.style.transform = 'translateX(0%)'; // Show menu
+                toggle.style.display = 'none'; // Hide toggle button
+            }
+        }
+
+        // Close menu if clicking outside
+        document.addEventListener('click', function (event) {
+            var menu = document.getElementById('verticalMenu');
+            var toggle = document.querySelector('.menu-toggle');
+            var target = event.target;
+            if (!menu.contains(target) && !toggle.contains(target) && menu.classList.contains('open')) {
+                toggleMenu(); // Close the menu
+            }
+        });
+
         // Highlight the active link
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var navLinks = document.querySelectorAll('.nav-links a');
             var currentPath = window.location.pathname.split('/').pop();
-            navLinks.forEach(function(link) {
+
+            navLinks.forEach(function (link) {
                 var linkPath = link.getAttribute('href').split('/').pop();
                 if (currentPath === linkPath) {
                     link.classList.add('active');
                 } else {
-                    link.classList.remove('active');
+                    link.classList.remove('active'); // Ensure only one link is active
                 }
+
+                link.addEventListener('click', function () {
+                    navLinks.forEach(function (nav) {
+                        nav.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
             });
         });
+
+
+        function checkScreenSize() {
+            const menu = document.getElementById('verticalMenu');
+            const toggle = document.querySelector('.menu-toggle');
+            const isLaptop = window.innerWidth >= 1024; // Adjust this value as needed
+            if (isLaptop) {
+                menu.style.transform = 'translateX(0)'; // Keep the menu open
+                toggle.style.display = 'none';
+            } else {
+                menu.style.transform = 'translateX(-100%)'; // Hide the menu
+                toggle.style.display = 'block';
+            }
+        }
+
+        // Call on initial load
+        checkScreenSize();
+
+        // Call on window resize
+        window.addEventListener('resize', checkScreenSize);
     </script>
 </body>
+
 </html>

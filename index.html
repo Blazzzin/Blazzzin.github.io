@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/CSS/index.css">
     <title>Home Page</title>
     <link rel="icon" href="logo.png">
 </head>
+
 <body>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <div class="vertical-menu" id="verticalMenu">
+    <nav class="vertical-menu" id="verticalMenu">
         <div class="nav-links">
             <a href="./" class="active"><b>Home</b></a>
             <a href="experience.html"><b>Experience</b></a>
-            <a href="projects.html"><b>Projects - Work In Progress</b></a>
+            <a href="projects.html"><b>Projects</b></a>
             <a href="Resume.pdf" target="_blank"><b>Resume</b></a>
-            <a href="2048.html"><b>2048 - Work In Progress</b></a>
+            <a href="2048.html"><b>Games</b></a>
         </div>
         <div class="social-links">
             <a href="https://github.com/Blazzzin" target="_blank" class="github-link">
@@ -25,19 +27,22 @@
                 <img src="Images\linkedin_logo.png" alt="LinkedIn">
             </a>
         </div>
-    </div>
-    <br><br>
-    <div class="logo">
-        <img src="Images\Pic.jpeg" alt="Profile Picture">
-    </div>
-    <div class="container">
-        Hello! I Am
-    </div>
-    <div class="heading">
-        <h1>SAHEER MULTANI</h1>
-    </div>
-    <div class="intro">
-        Software Engineering Student at <a href="https://www.torontomu.ca/engineering-architectural-science/" target="_blank">Toronto Metropolitan University</a>
+    </nav>
+    <br>
+    <div class="centered-content">
+        <div class="logo">
+            <img src="Images\Pic.jpeg" alt="Profile Picture">
+        </div>
+        <div class="container">
+            Hello! I Am
+        </div>
+        <div class="heading">
+            <h1>SAHEER MULTANI</h1>
+        </div>
+        <div class="intro">
+            Software Engineering Student at <a href="https://www.torontomu.ca/engineering-architectural-science/"
+                target="_blank">Toronto Metropolitan University</a>
+        </div>
     </div>
     <script>
         function toggleMenu() {
@@ -55,7 +60,7 @@
         }
 
         // Close menu if clicking outside
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             var menu = document.getElementById('verticalMenu');
             var toggle = document.querySelector('.menu-toggle');
             var target = event.target;
@@ -65,22 +70,65 @@
         });
 
         // Highlight the active link
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var navLinks = document.querySelectorAll('.nav-links a');
             var currentPath = window.location.pathname.split('/').pop();
-            navLinks.forEach(function(link) {
+
+            navLinks.forEach(function (link) {
                 var linkPath = link.getAttribute('href').split('/').pop();
-                if (currentPath === linkPath || (currentPath === '' && linkPath === './')) {
+                if (currentPath === linkPath) {
                     link.classList.add('active');
+                } else {
+                    link.classList.remove('active'); // Ensure only one link is active
                 }
-                link.addEventListener('click', function() {
-                    navLinks.forEach(function(nav) {
+
+                link.addEventListener('click', function () {
+                    navLinks.forEach(function (nav) {
                         nav.classList.remove('active');
                     });
                     this.classList.add('active');
                 });
             });
+
+            let lastScrollTop = 0; // Keeps track of the last scroll position
+            const toggle = document.querySelector('.menu-toggle');
+
+            window.addEventListener('scroll', function () {
+                const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop) {
+                    // User is scrolling down
+                    toggle.style.display = 'none';
+                } else {
+                    // User is scrolling up
+                    toggle.style.display = 'block';
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+            });
         });
+
+        function checkScreenSize() {
+            const menu = document.getElementById('verticalMenu');
+            const toggle = document.querySelector('.menu-toggle');
+            const content = document.body;
+            const isLaptop = window.innerWidth >= 1024; // Adjust this value as needed
+            if (isLaptop) {
+                menu.style.transform = 'translateX(0)'; // Keep the menu open
+                toggle.style.display = 'none';
+                content.classList.add('menu-open');
+            } else {
+                menu.style.transform = 'translateX(-100%)'; // Hide the menu
+                toggle.style.display = 'block';
+                content.classList.remove('menu-open');
+            }
+        }
+
+        // Call on initial load
+        checkScreenSize();
+
+        // Call on window resize
+        window.addEventListener('resize', checkScreenSize);
     </script>
 </body>
+
 </html>

@@ -1,0 +1,128 @@
+.job-entry {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1000px;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+}
+
+.job-entry:last-child {
+    border-bottom: none;
+}
+
+/* Styles for job title and description */
+.job-title,
+.end,
+.animated-dots-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.company {
+    display: block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 5px;
+    font-size: 1em;
+    color: #ffcc00;
+}
+
+.company a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.company a:hover {
+    color: #ffffff;
+}
+
+.company a:visited {
+    color: #ffcc00;
+}
+
+.timeframe {
+    display: block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 5px;
+    color: #000000;
+}
+
+.job-description {
+    margin-top: 10px;
+    max-width: 1000px;
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #000000;
+    line-height: 1.5;
+}
+
+/* Define the keyframes for sequential dot appearance */
+@keyframes dot-appear {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Style for animated dots */
+.animation-dots {
+    display: inline-block;
+    font-size: 1.5em;
+}
+
+.dot {
+    display: inline-block;
+    opacity: 0;
+    animation: dot-appear 3.5s infinite;
+}
+
+.dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 2s;
+}
+
+/* Company logo styles */
+.company-logo img {
+    margin-top: 5px;
+    height: auto;
+}
+
+.company-logo img:hover {
+    transform: scale(1.1);
+}
+
+@media (min-width: 1024px) {
+    .job-entry,
+    .animated-dots-container {
+        margin-left: 290px; /* Adjusts margin for larger screens */
+    }
+    .company-logo img {
+        width: 15%;
+    }
+}
+
+@media (max-width: 1023px) {
+    .job-entry, 
+    .animated-dots-container {
+        margin-left: 20%; /* Adjusts margin for smaller screens */
+    }
+    .company-logo img {
+        width: 40%;
+    }
+}

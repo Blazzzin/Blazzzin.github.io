@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/experience.css">
     <title>Experience Page</title>
     <link rel="icon" href="logo.png">
 </head>
+
 <body class="experience-page">
-    <div class="vertical-menu" id="verticalMenu">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav class="vertical-menu" id="verticalMenu">
         <div class="nav-links">
-            <a href="./"><b>Home</b></a>
-            <a href="experience.html" class="active"><b>Experience</b></a>
-            <a href="projects.html"><b>Projects - Work In Progress</b></a>
+            <a href="./" class="active"><b>Home</b></a>
+            <a href="experience.html"><b>Experience</b></a>
+            <a href="projects.html"><b>Projects</b></a>
             <a href="Resume.pdf" target="_blank"><b>Resume</b></a>
-            <a href="2048.html"><b>2048 - Work In Progress</b></a>
+            <a href="2048.html"><b>Games</b></a>
         </div>
         <div class="social-links">
             <a href="https://github.com/Blazzzin" target="_blank" class="github-link">
@@ -24,8 +28,7 @@
                 <img src="Images\linkedin_logo.png" alt="LinkedIn">
             </a>
         </div>
-    </div>
-
+    </nav>
     <div class="animated-dots-container">
         <span class="animation-dots">
             <span class="dot"><b>.</b></span>
@@ -33,96 +36,168 @@
             <span class="dot"><b>.</b></span>
         </span>
     </div>
-    <div class="end">
-        -------------------------------------------------------------------------------------------------------------------
-    </div>
-    <div class="jobtitle">
-        <b>REGISTRARIAL SERVICES STUDENT AMBASSADOR</b>
-    </div>
-    <div class="company-logo">
-        <img src="Images\tmu.png" alt="company-logo">
-    </div>
-    <label class="company">
-        <!-- <a href="https://www.torontomu.ca/" target="_blank">TORONTO METROPOLITAN UNIVERSITY</a> |  -->
-        CONTRACT PART-TIME | TORONTO, ONTARIO
-    </label>
-    <label class="timeframe">
-        <b>SEPTEMBER 2024 - PRESENT</b>
-    </label>
-    <div class="jobdescription1">
-        • COMING SOON
-    </div>
-    <div class="end">
-        -------------------------------------------------------------------------------------------------------------------
-    </div>
-    <div class="jobtitle">
-        <b>BIM 360 SOFTWARE DEVELOPER</b>
-    </div>
-    <div class="company-logo2">
-        <img src="Images\loblaw.jpg" alt="company-logo2">
-    </div>
-    <label class="company">
-        <!-- <a href="https://www.loblaw.ca/" target="_blank">LOBLAW COMPANIES LIMITED</a> |  -->
-        INTERNSHIP | BRAMPTON, ONTARIO
-    </label>
-    <label class="timeframe">
-        <b>MAY 2024 - AUGUST 2024</b>
-    </label>
-    <div class="jobdescription1">
-        • Developed a full-stack integration using Node.js and Express.js for Autodesk BIM 360, <br>enabling seamless addition of up to 425+ users to a project with a frontend with HTML/CSS <br>
-        • Developed an additional full-stack integration for Autodesk BIM 360, enabling <br>seamless addition of a singular user to 3500+ projects in BIM 360 through API calls <br>
-        • Used Smartsheet APIs to create an application using Node.js that can perform tasks such as updating/moving <br>rows and columns, etc. <br>
-        • Responsible for creating BIM 360 Projects for the entire Loblaw Network <br>
-        • Developed tools to automate workflows and streamline Smartsheet formulas and processes <br>
-        • Conducted detailed audits of store plans to ensure accuracy in shelving arrangements, door models, <br>office item specifications, and other critical elements <br>
-    </div>
-    <div class="end">
-        -------------------------------------------------------------------------------------------------------------------
-    </div>
-    <div class="jobtitle">
-        <b>GENERAL MERCHANDISE AND GROCERY CLERK</b>
-    </div>
-    <div class="company-logo2">
-        <img src="Images\loblaw.jpg" alt="company-logo2">
-    </div>
-    <label class="company">
-        <!-- <a href="https://www.loblaw.ca/" target="_blank">LOBLAW COMPANIES LIMITED</a> -  -->
-        <a href="https://www.wholesaleclub.ca/" target="_blank">THE REAL CANADIAN WHOLESALE CLUB</a> | PERMANENT PART-TIME | MISSISSAUGA, ONTARIO
-    </label>
-    <label class="timeframe">
-        <b>JULY 2022 - JULY 2024</b>
-    </label>
-    <div class="jobdescription1">
-        • Provided great customer service by providing to any customers needs <br>
-        • Ensured store shelves are stocked organized <br>
-        • Maintained and stocked product displays and shelves that meet company standards <br>
-        • Ensured accurate product scanning, identified inventory needs and assisted with ordering <br>
-        • Setup company-directed promotions and programs <br>
-        • Kept department areas neat and ensured health and safety standards <br>
-        • Operated a power jack and pump jack with certification <br>
-    </div>
-    <div class="end">
-        -------------------------------------------------------------------------------------------------------------------
-    </div>
-    <br><br><br><br>
+    <!-- Registrarial Services Student Ambassador Section -->
+    <section class="job-entry">
+        <div class="job-title">
+            <b>REGISTRARIAL SERVICES STUDENT AMBASSADOR</b>
+        </div>
+        <div class="company-info">
+            <div class="company-logo">
+                <img src="Images/tmu.png" alt="company-logo">
+            </div>
+            <div class="company-details">
+                <label class="company">CONTRACT PART-TIME | TORONTO, ONTARIO</label>
+                <label class="timeframe"><b>SEPTEMBER 2024 - PRESENT</b></label>
+            </div>
+        </div>
+        <div class="job-description">
+            • COMING SOON
+        </div>
+    </section>
+    <!-- BIM 360 Software Developer Section -->
+    <section class="job-entry">
+        <div class="job-title">
+            <b>BIM 360 SOFTWARE DEVELOPER</b>
+        </div>
+        <div class="company-info">
+            <div class="company-logo">
+                <img src="Images/loblaw.png" alt="company-logo">
+            </div>
+            <div class="company-details">
+                <label class="company">INTERNSHIP | BRAMPTON, ONTARIO</label>
+                <label class="timeframe"><b>MAY 2024 - AUGUST 2024</b></label>
+            </div>
+        </div>
+        <div class="job-description">
+            • Developed a full-stack integration using Node.js and Express.js for Autodesk BIM 360, enabling seamless
+            addition of
+            over 425 users to a project, improving user management through a user-friendly frontend built with HTML/CSS.
+            <br>
+            • Created an additional full-stack integration for BIM, facilitating the addition of a single user to over
+            3,500 projects
+            via API calls, streamlining project onboarding and reducing setup time. <br>
+            • Leveraged Smartsheet APIs to develop an application that automates the updating and moving of rows and
+            columns leading to a reduction in manual data entry efforts and ensuring accurate project tracking. <br>
+            • Designed and implemented workflow automation for Smartsheet, enabling efficient archiving of old tasks
+            across
+            thousands of stores, which improved overall data management and reduced administrative workload. <br>
+        </div>
+    </section>
+    <!-- General Merchandise & Grocery Clerk Section -->
+    <section class="job-entry">
+        <div class="job-title">
+            <b>GENERAL MERCHANDISE & GROCERY CLERK</b>
+        </div>
+        <div class="company-info">
+            <div class="company-logo">
+                <img src="Images/loblaw.png" alt="company-logo">
+            </div>
+            <div class="company-details">
+                <label class="company">PERMANENT PART-TIME | MISSISSAUGA, ONTARIO</label>
+                <label class="timeframe"><b>JULY 2022 - JULY 2024</b></label>
+            </div>
+        </div>
+        <div class="job-description">
+            • Provided great customer service by providing to any customers needs <br>
+            • Ensured store shelves are stocked organized <br>
+            • Maintained and stocked product displays and shelves that meet company standards <br>
+            • Ensured accurate product scanning, identified inventory needs and assisted with ordering <br>
+            • Setup company-directed promotions and programs <br>
+            • Kept department areas neat and ensured health and safety standards <br>
+            • Operated a power jack and pump jack with certification <br>
+        </div>
+    </section>
+    <br><br>
     <script>
-        // Highlight the active link
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var navLinks = document.querySelectorAll('.nav-links a');
             var currentPath = window.location.pathname.split('/').pop();
-            navLinks.forEach(function(link) {
+
+            navLinks.forEach(function (link) {
                 var linkPath = link.getAttribute('href').split('/').pop();
-                if (currentPath === linkPath || (currentPath === '' && linkPath === './')) {
+                if (currentPath === linkPath) {
                     link.classList.add('active');
+                } else {
+                    link.classList.remove('active'); // Ensure only one link is active
                 }
-                link.addEventListener('click', function() {
-                    navLinks.forEach(function(nav) {
+
+                link.addEventListener('click', function () {
+                    navLinks.forEach(function (nav) {
                         nav.classList.remove('active');
                     });
                     this.classList.add('active');
                 });
             });
+
+            const toggle = document.querySelector('.menu-toggle');
+            let lastScrollTop = 0; // Keeps track of the last scroll position
+            let isLaptop = window.innerWidth >= 1024; // Initial check
+
+            function handleScroll() {
+                const scrollTop = window.scrollY || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    // User is scrolling down
+                    toggle.style.display = 'none';
+                } else {
+                    // User is scrolling up
+                    toggle.style.display = 'block';
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+            }
+
+            function checkScreenSize() {
+                isLaptop = window.innerWidth >= 1024; // Update screen size check
+                const menu = document.getElementById('verticalMenu');
+                const content = document.body;
+
+                if (isLaptop) {
+                    menu.style.transform = 'translateX(0)'; // Keep the menu open
+                    toggle.style.display = 'none';
+                    content.classList.add('menu-open');
+                    window.removeEventListener('scroll', handleScroll); // Remove scroll listener on larger screens
+                } else {
+                    menu.style.transform = 'translateX(-100%)'; // Hide the menu
+                    toggle.style.display = 'block';
+                    content.classList.remove('menu-open');
+                    window.addEventListener('scroll', handleScroll); // Add scroll listener on mobile
+                }
+            }
+
+            // Initial checks
+            checkScreenSize();
+
+            // Handle window resize with debouncing
+            let resizeTimeout;
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(checkScreenSize, 100);
+            });
+
+            // Close menu if clicking outside
+            document.addEventListener('click', function (event) {
+                var menu = document.getElementById('verticalMenu');
+                var target = event.target;
+                if (!menu.contains(target) && !toggle.contains(target) && menu.classList.contains('open')) {
+                    toggleMenu(); // Close the menu
+                }
+            });
         });
+
+        // Menu toggle function
+        function toggleMenu() {
+            var menu = document.getElementById('verticalMenu');
+            var toggle = document.querySelector('.menu-toggle');
+            if (menu.classList.contains('open')) {
+                menu.classList.remove('open');
+                menu.style.transform = 'translateX(-100%)'; // Hide menu
+                toggle.style.display = 'block'; // Show toggle button
+            } else {
+                menu.classList.add('open');
+                menu.style.transform = 'translateX(0%)'; // Show menu
+                toggle.style.display = 'none'; // Hide toggle button
+            }
+        }
     </script>
 </body>
+
 </html>
