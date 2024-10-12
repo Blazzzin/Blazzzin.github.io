@@ -125,7 +125,7 @@
 @media (max-width: 1023px) {
     .job-entry, 
     .animated-dots-container {
-        margin-left: 10%; /* Adjusts margin for smaller screens */
+        margin-left: 15%; /* Adjusts margin for smaller screens */
     }
     .company-logo img {
         width: 40%;
