@@ -1,0 +1,33 @@
+body {
+    background-color: #7e7a8a; /* Same background as index.css */
+    display: flex;
+    height: 100vh; /* Full height */
+    margin: 0;
+}
+
+/* Style for the PDF container */
+.pdf-container {
+    flex: 1; /* Allow the PDF container to fill the remaining space */
+    overflow: auto; /* Allow scrolling if the content exceeds the container */
+    padding: 0; /* Remove padding */
+    margin-left: 0; /* Reset margin for smaller screens */
+    transition: margin-left 0.3s ease; /* Smooth transition for the margin */
+}
+
+/* Adjust PDF container margin based on menu visibility */
+.vertical-menu.open + .pdf-container {
+    margin-left: 250px; /* Adjust for the width of the menu when open */
+}
+
+embed {
+    width: 100%;
+    height: 100%; /* Full height of the container */
+    border: none; /* No border */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1023px) {
+    .pdf-container {
+        margin-left: 0; /* No margin for PDF container on small screens */
+    }
+}
