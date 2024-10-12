@@ -11,7 +11,24 @@ body {
     overflow: auto; /* Allow scrolling if the content exceeds the container */
     padding: 0; /* Remove padding */
     margin-left: 0; /* Reset margin for smaller screens */
-    transition: margin-left 0.3s ease; /* Smooth transition for the margin */
+    display: flex; /* Make it a flex container */
+    justify-content: center; /* Center content horizontally */
+    align-items: flex-start; /* Align items at the top */
+}
+
+/* Wrapper for download link */
+.download-link {
+    margin-top: 100px; /* Space above the download link */
+    text-align: center; /* Center align the text */
+}
+
+.pdf-container a {
+    font-size: 24px; /* Increase font size */
+    background-color: #4CAF50; /* Background color for the button */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Transition effect for hover */
 }
 
 /* Adjust PDF container margin based on menu visibility */

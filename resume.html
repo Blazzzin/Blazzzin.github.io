@@ -30,6 +30,7 @@
     
     <div class="pdf-container" id="pdfContainer">
         <!-- The embed element will be added via JavaScript if screen width is sufficient -->
+        <div class="download-link"></div> <!-- New wrapper div -->
     </div>
 
     <script>
@@ -63,7 +64,7 @@
                 menu.style.transform = 'translateX(-100%)'; // Hide menu
                 toggle.style.display = 'block'; // Show toggle button
                 // Change to download link
-                pdfContainer.innerHTML = '<a href="Resume.pdf" download>Download Resume</a>';
+                pdfContainer.innerHTML = '<div class="download-link"><a href="Resume.pdf" target="_blank">YOUR BROWSER DOES NOT SUPPORT PDF VIEWERS. DOWNLOAD THE RESUME INSTEAD</a></div>';
             }
         }
 
