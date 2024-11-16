@@ -36,41 +36,41 @@
         <h2>PROJECTS</h2>
         <div class="project-grid">
             <div class="project-card">
+                <img src="Images/logo_reduced.png" alt="portfolio">
+                <h3>Portfolio Website</h3>
+                <p>You are currently here! <br> Built Using HTML, CSS, & JavaScript</p>
+                <button type="button" class="collapsible" onclick="showPopup1()">More Information →</button>
+            </div>
+            <div class="project-card">
                 <img src="Images/smartcraftingdisplay.jpg" alt="Smart Crafting Display">
                 <h3>Smart Crafting Display</h3>
-                <p>test description</p>
-                <button type="button" class="collapsible" onclick="showPopup1()">More Information →</button>
+                <p>Built Using Java, Gradle, & Minecraft Forge APIs</p>
+                <button type="button" class="collapsible" onclick="showPopup2()">More Information →</button>
             </div>
             <div class="project-card">
                 <img src="Images/formatx2.jpg" alt="FormatX">
                 <h3>FormatX</h3>
-                <p>test description</p>
+                <p>Built Using Python, HTML, CSS, & Flask</p>
                 <button type="button" class="collapsible" id="button2">More Information →</button>
             </div>
             <div class="project-card">
                 <img src="Images/retailbankingsystem.jpg" alt="Retail Banking System">
                 <h3>Retail Banking System</h3>
-                <p>test description</p>
+                <p>Built Using MySQL, SQL Plus, JavaFX, & Bash</p>
                 <button type="button" class="collapsible" id="button3">More Information →</button>
             </div>
             <div class="project-card">
                 <img src="Images/cpu.jpg" alt="CPU">
                 <h3>Central Processing Unit</h3>
-                <p>test description</p>
+                <p>Built Using VHDL, FPGA Boards, & Quartus II</p>
                 <button type="button" class="collapsible" id="button4">More Information →</button>
             </div>
             <div class="project-card">
                 <img src="Images/eebot.jpg" alt="eebot">
                 <h3>MazeBot Navigator</h3>
-                <p>test description</p>
+                <p>Built Using HCS12 Assembly, Microcontrollers, & Mobile Robot</p>
                 <button type="button" class="collapsible" id="button5">More Information →</button>
             </div>
-            <!-- <div class="project-card">
-                <img src="Images/eebot3.jpg" alt="test">
-                <h3>TEST TEST</h3>
-                <p>test</p>
-                <button type="button" class="collapsible" id="buttonk">More Information →</button>
-            </div> -->
         </div>
     </section>
 
@@ -149,7 +149,19 @@
             // window.open('test.html', '_blank'); // - Opens in a new tab
         });
 
+        // Pop Up Functions
         function showPopup1() {
+            Swal.fire({
+                title: "Portfolio Website",
+                text: "More In Depth Info",
+                showCloseButton: true,
+                icon: 'info',
+                width: '50%',
+                showConfirmButton: false
+            });
+        }
+
+        function showPopup2() {
             Swal.fire({
                 title: "Smart Crafting Display",
                 text: "More In Depth Info",
