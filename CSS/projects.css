@@ -12,9 +12,10 @@
 }
 
 #projects h2 {
+    margin-top: 1rem;
     font-size: 2rem;
     color: #ebdd1b;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     font-weight: bold;
 }
 
