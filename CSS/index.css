@@ -169,7 +169,7 @@ body {
   padding: 10px;
   margin: 0;
   margin-top: auto;
-  border-top: 5px solid #444;
+  border-top: 5px solid #333;
 }
 
 /* Style for GitHub and LinkedIn links */
@@ -199,4 +199,14 @@ body {
 
 .vertical-menu.open+.menu-toggle {
   display: none;
+}
+
+.nav-links .menu-title {
+  background-color: #575454; /* Green background */
+  color: white; /* White text color */
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  pointer-events: none;
 }

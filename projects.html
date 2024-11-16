@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/projects.css">
     <title>My Projects</title>
     <link rel="icon" href="logo.png">
 </head>
@@ -13,11 +14,12 @@
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav class="vertical-menu" id="verticalMenu">
         <div class="nav-links">
+            <a href="" class="menu-title">Menu</a>
             <a href="./" class="active"><b>Home</b></a>
             <a href="experience.html"><b>Experience</b></a>
-            <a href="projects.html"><b>Projects - Work In Progress</b></a>
+            <a href="projects.html"><b>Projects - WIP</b></a>
             <a href="resume.html"><b>Resume</b></a>
-            <a href="games.html"><b>Games - Work In Progress</b></a>
+            <a href="games.html"><b>Games - WIP</b></a>
         </div>
         <div class="social-links">
             <a href="https://github.com/Blazzzin" target="_blank" class="github-link">
@@ -28,6 +30,43 @@
             </a>
         </div>
     </nav>
+
+    <section id="projects">
+        <h2>PROJECTS</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="blogspire-thumbnail.jpg" alt="BlogSpire Screenshot">
+                <h3>Smart Crafting Display</h3>
+                <p>test description</p>
+            </div>
+            <div class="project-card">
+                <img src="Images/github_logo.png" alt="Interpol8r Screenshot">
+                <h3>FormatX</h3>
+                <p>test description</p>
+            </div>
+            <div class="project-card">
+                <img src="code-island-thumbnail.jpg" alt="Code Island Screenshot">
+                <h3>Retail Banking System</h3>
+                <p>test description</p>
+            </div>
+            <div class="project-card">
+                <img src="test.png" alt="test">
+                <h3>Central Processing Unit</h3>
+                <p>test description</p>
+            </div>
+            <div class="project-card">
+                <img src="test.png" alt="test">
+                <h3>TEST TEST</h3>
+                <p>test</p>
+            </div>
+            <div class="project-card">
+                <img src="test.png" alt="test">
+                <h3>TEST TEST</h3>
+                <p>test</p>
+            </div>
+        </div>
+    </section>
+
     <script>
         function toggleMenu() {
             var menu = document.getElementById('verticalMenu');
