@@ -10,7 +10,6 @@ h1 {
 body {
   background-color: #7e7a8a; /* Light gray background */
   overflow-x: hidden; /* Prevent horizontal scroll */
-  margin: 0;
   box-sizing: border-box;
 }
 
@@ -19,27 +18,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 140px;
   position: relative;
   animation: left-to-right 5s forwards;
 }
 
 /* Centered content */
 .centered-content {
-  position: absolute;
-  top: 35%; /* Center it vertically */
-  left: 50%; /* Center it horizontally */
-  transform: translate(-50%, -50%); /* Adjust to truly center */
-  text-align: center; /* Center text within the content */
+  display: grid;
+  place-items: center; /* Keeps it horizontally centered */
+  padding-top: 100vh; /* Push it down to the middle of the viewport */
+  transform: translateY(-50%); /* Adjust to truly center vertically */
 }
 
-/* Responsive positioning */
 @media (min-width: 1024px) {
   .centered-content {
-    position: absolute;
-    left: 250px; /* Width of the vertical menu */
-    right: 0; /* Make it stretch to the right end */
-    transform: translateY(-50%); /* Adjust to truly center vertically */
+    margin-left: 250px;
   }
 }
 
@@ -69,7 +62,6 @@ body {
 
 /* Center the container content */
 .container {
-  text-align: center;
   margin-top: 15px;
   font-size: 1.5em;
   color: #ebdd1b;
@@ -79,7 +71,6 @@ body {
 
 /* Center the heading content */
 .heading {
-  text-align: center;
   margin-top: 5px;
   position: relative;
   animation: left-to-right 5s forwards;
@@ -94,8 +85,8 @@ body {
 
 /* Center the intro content */
 .intro {
+  margin-top: 5px;
   text-align: center;
-  margin-top: 15px;
   font-size: 1.5em;
   color: #ebdd1b;
   position: relative;
