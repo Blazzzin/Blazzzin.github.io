@@ -92,3 +92,22 @@
 .collapsible:hover {
     background-color: #ccc;
 }
+
+.swal2-icon {
+    width: 70px !important;
+    height: 70px !important;
+}
+
+.swal2-title {
+    margin-top: -20px !important;
+    margin-bottom: -20px !important;
+}
+
+.swal2-html-container {
+    text-align: left !important;
+    text-align: justify !important;
+}
+
+.swal2-html-container img {
+    align-items: center;
+}

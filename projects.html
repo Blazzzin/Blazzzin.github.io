@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/index.css">
     <link rel="stylesheet" href="/CSS/projects.css">
-    <title>My Projects</title>
+    <title>Projects</title>
     <link rel="icon" href="logo.png">
 </head>
 
@@ -153,11 +153,40 @@
         function showPopup1() {
             Swal.fire({
                 title: "Portfolio Website",
-                text: "More In Depth Info (Coming Soon)",
+                //text: "More In Depth Info (Coming Soon)",
                 showCloseButton: true,
                 icon: 'info',
                 width: '50%',
-                showConfirmButton: false
+                showConfirmButton: false,
+                html: `
+                <div>
+                <p><b>Overview:</b></p>
+                <p>A portfolio website designed to showcase my achievements, including workplace experience and personal projects. Built using the following technologies:</p>
+                <ul style="text-align: left;">
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+                <p>It serves as an interactive portfolio to demonstrate my skills and knowledge in web development. This website features multiple sections, including the following:</p>
+                <ul style="text-align: left;">
+                    <li>Home</li>
+                    <li>Experience</li>
+                    <li>Projects - You are currently here!</li>
+                    <li>Resume</li>
+                    <li>Games</li>
+                </ul>
+                <p>Features of the Website:</p>
+                <ul style="text-align: left;">
+                    <li>Responsive Design for Optimal Viewing on All Devices</li>
+                    <li>Clean, Accessible HTML Structure</li>
+                    <li>Stylish and Consistent Layout with Custom CSS</li>
+                    <li>and more...</li>
+                </ul>
+                <p>The repository for this website can be accessed by clicking on the GitHub icon below.</p>
+                <a href="https://github.com/Blazzzin/blazzzin.github.io" target="_blank" class="github-link">
+                <img src="Images/github_logo.png" alt="Github"></a>
+            </div>
+            `
             });
         }
 
@@ -179,7 +208,32 @@
                 showCloseButton: true,
                 icon: 'info',
                 width: '50%',
-                showConfirmButton: false
+                showConfirmButton: false,
+                html: `
+                <div>
+                <p><b>Overview:</b></p>
+                <p>An innovative web application designed to simplify document formatting. Built using:</p>
+                <ul style="text-align: left;">
+                    <li>Python</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Flask</li>
+                </ul>
+                <p>FormatX streamlines document formatting, enabling users to easily create professional-looking documents. Key features include:</p>
+                <ul style="text-align: left;">
+                    <li>PDF Merging</li>
+                    <li>PDF Splittig</li>
+                    <li>PDF Organize</li>
+                    <li>DOCX Conversion</li>
+                    <li>Image Conversion</li>
+                </ul>
+                <p>The idea for this project originated when I needed to merge and reorganize PDF documents. I found that most available 
+                    tools were either paid or unreliable, raising concerns about uploading confidential files. This led me to create my own solution.</p>
+                <p>The repository is private because the project is still a work in progress. Once it reaches a more polished state, I may consider making it public.</p>
+                <a href="https://github.com/Blazzzin" target="_blank" class="github-link">
+                <img src="Images/github_logo.png" alt="Github"></a>
+            </div>
+            `
             });
         }
 
