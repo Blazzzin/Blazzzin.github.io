@@ -158,6 +158,9 @@
                 icon: 'info',
                 width: '50%',
                 showConfirmButton: false,
+                customClass: {
+                    popup: 'responsive-popup'  // Custom class for CSS
+                },
                 html: `
                 <div>
                 <p><b>Overview:</b></p>
@@ -236,12 +239,6 @@
             `
             });
         }
-
-        // When Button 2 is pressed for the "FormatX" project, it redirects to ...
-        document.getElementById('button2').addEventListener('click', () => {
-            // window.location.href = 'test.html'; // - Opens it in the current tab 
-            window.open('tes1t.html', '_blank'); // - Opens in a new tab
-        });
     </script>
 </body>
 

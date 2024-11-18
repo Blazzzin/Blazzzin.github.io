@@ -111,3 +111,15 @@
 .swal2-html-container img {
     align-items: center;
 }
+
+/* Default popup width for larger screens (laptops/desktops) */
+.swal2-popup.responsive-popup {
+    width: 50% !important;
+}
+
+/* Adjust popup width for mobile devices (max width 1023px) */
+@media (max-width: 1023px) {
+    .swal2-popup.responsive-popup {
+        width: 80% !important;
+    }
+}
