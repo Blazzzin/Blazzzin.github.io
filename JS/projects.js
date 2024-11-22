@@ -267,7 +267,7 @@ function showPopup5() {
         <li>FPGA (Field-Programmable Gate Array) for hardware implementation</li>
         <li>Finite State Machine (FSM) for managing CPU control flow</li>
     </ul>
-    <a href="https://github.com/Blazzzin" target="_blank" class="github-link">
+    <a href="https://github.com/Blazzzin/Central-Processing-Unit" target="_blank" class="github-link">
         <img src="Images/github_logo.png" alt="Github">
     </a>
 </div>
