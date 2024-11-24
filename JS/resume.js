@@ -22,13 +22,13 @@ function adjustMenuOnResize() {
         menu.style.transform = 'translateX(0%)'; // Keep menu open
         toggle.style.display = 'none'; // Hide toggle button
         // Add the PDF embed
-        pdfContainer.innerHTML = '<embed src="Resume.pdf" type="application/pdf" />';
+        pdfContainer.innerHTML = '<embed src="../Assets/Resume.pdf" type="application/pdf" />';
     } else {
         menu.classList.remove('open');
         menu.style.transform = 'translateX(-100%)'; // Hide menu
         toggle.style.display = 'block'; // Show toggle button
         // Change to download link
-        pdfContainer.innerHTML = '<div class="download-link"><a href="Resume.pdf" target="_blank">YOUR BROWSER DOES NOT SUPPORT PDF VIEWERS. <u>DOWNLOAD</u> THE RESUME INSTEAD</a></div>';
+        pdfContainer.innerHTML = '<div class="download-link"><a href="../Assets/Resume.pdf" target="_blank">YOUR BROWSER DOES NOT SUPPORT PDF VIEWERS. <u>DOWNLOAD</u> THE RESUME INSTEAD</a></div>';
     }
 }
 
