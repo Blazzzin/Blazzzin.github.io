@@ -22,44 +22,6 @@ document.addEventListener('click', function (event) {
     }
 });
 
-// Highlight the active link
-document.addEventListener('DOMContentLoaded', function () {
-    var navLinks = document.querySelectorAll('.nav-links a');
-    var currentPath = window.location.pathname.split('/').pop();
-
-    navLinks.forEach(function (link) {
-        var linkPath = link.getAttribute('href').split('/').pop();
-        if (currentPath === linkPath) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active'); // Ensure only one link is active
-        }
-
-        link.addEventListener('click', function () {
-            navLinks.forEach(function (nav) {
-                nav.classList.remove('active');
-            });
-            this.classList.add('active');
-        });
-    });
-
-    let lastScrollTop = 0; // Keeps track of the last scroll position
-    const toggle = document.querySelector('.menu-toggle');
-
-    window.addEventListener('scroll', function () {
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-        if (scrollTop > lastScrollTop) {
-            // User is scrolling down
-            toggle.style.display = 'none';
-        } else {
-            // User is scrolling up
-            toggle.style.display = 'block';
-        }
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-    });
-});
-
 function checkScreenSize() {
     const menu = document.getElementById('verticalMenu');
     const toggle = document.querySelector('.menu-toggle');
