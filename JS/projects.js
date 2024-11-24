@@ -36,7 +36,7 @@ function showPopup1() {
         </ul>
         <p>The repository for this website can be accessed by clicking on the GitHub icon below.</p>
         <a href="https://github.com/Blazzzin/blazzzin.github.io" target="_blank" class="github-link">
-        <img src="Images/github_logo.png" alt="Github"></a>
+        <img src="Assets/github_logo.png" alt="Github"></a>
     </div>
     `
     });
@@ -75,7 +75,7 @@ function showPopup2() {
     </ul>
     <p>The repository is private because the project is still a work in progress. Once it reaches a more polished state, I may consider making it public.</p>
     <a href="https://github.com/Blazzzin" target="_blank" class="github-link">
-        <img src="Images/github_logo.png" alt="Github">
+        <img src="Assets/github_logo.png" alt="Github">
     </a>
 </div>
 `
@@ -115,7 +115,7 @@ function showPopup3() {
             tools were either paid or unreliable, raising concerns about uploading confidential files. This led me to create my own solution.</p>
         <p>The repository is private because the project is still a work in progress. Once it reaches a more polished state, I may consider making it public.</p>
         <a href="https://github.com/Blazzzin" target="_blank" class="github-link">
-        <img src="Images/github_logo.png" alt="Github"></a>
+        <img src="Assets/github_logo.png" alt="Github"></a>
     </div>
     `
     });
@@ -159,7 +159,7 @@ function showPopup4() {
         <li>Interactive GUI for seamless banking interactions</li>
     </ul>
     <a href="https://github.com/Blazzzin" target="_blank" class="github-link">
-        <img src="Images/github_logo.png" alt="Github">
+        <img src="Assets/github_logo.png" alt="Github">
     </a>
 </div>
 `
@@ -202,7 +202,7 @@ function showPopup5() {
         <li>Finite State Machine (FSM) for managing CPU control flow</li>
     </ul>
     <a href="https://github.com/Blazzzin/Central-Processing-Unit" target="_blank" class="github-link">
-        <img src="Images/github_logo.png" alt="Github">
+        <img src="Assets/github_logo.png" alt="Github">
     </a>
 </div>
 `
@@ -239,7 +239,7 @@ function showPopup6() {
         <li>Actuator Control for Motors</li>
     </ul>            
     <a href="https://github.com/Blazzzin" target="_blank" class="github-link">
-        <img src="Images/github_logo.png" alt="Github">
+        <img src="Assets/github_logo.png" alt="Github">
     </a>
 </div>
 `
