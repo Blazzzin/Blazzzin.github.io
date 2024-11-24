@@ -186,6 +186,7 @@ body {
   cursor: pointer;
   color: #ffffff;
   z-index: 1001;
+  display: block;
 }
 
 .vertical-menu.open+.menu-toggle {
@@ -200,4 +201,14 @@ body {
   text-align: center;
   font-size: 18px;
   pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .vertical-menu {
+    transform: translateX(0);
+  }
 }
