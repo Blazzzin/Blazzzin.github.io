@@ -1,28 +1,29 @@
+/* Job entry container */
 .job-entry {
-    display: flex;
-    flex-direction: column;
+    margin: 20px auto; /* Adds vertical spacing between entries */
+    padding-bottom: 20px; /* Slight padding at the bottom */
     width: 90%;
     max-width: 1000px;
-    border-bottom: 2px solid #ccc;
-    padding: 20px 0;
+    border-bottom: 2px solid #4A4A4A; /* Subtle darker gray line separator */
 }
 
 .job-entry:first-child {
-    border-top: 2px solid #ccc;
-    padding: 20px 0;
+    border-top: 2px solid #4A4A4A; /* Add a top separator for the first entry */
 }
 
 .job-entry:last-child {
-    border-bottom: none;
+    border-bottom: none; /* Remove bottom border for the last entry */
 }
 
-/* Styles for job title and description */
+/* Job title and main text styling */
 .job-title,
 .end,
 .animated-dots-container {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #ffffff;
-    font-size: 1.5em;
+    color: #EDEDED; /* Softer white */
+    font-size: 1.8em; /* Slightly larger */
+    font-weight: bold;
+    margin-bottom: 10px; /* Adds spacing below the title */
 }
 
 .company {
@@ -30,37 +31,40 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 5px;
     font-size: 1em;
-    color: #ffcc00;
+    color: #B0B0B0; /* Light gray for supporting text */
 }
 
 .company a {
-    color: inherit;
+    color: #4DB6AC; /* Teal accent for links */
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
 }
 
 .company a:hover {
-    color: #ffffff;
+    color: #90CAF9; /* Soft blue on hover */
+    text-decoration: underline;
 }
 
 .company a:visited {
-    color: #ffcc00;
+    color: #FFC107; /* Warm gold for visited links */
 }
 
 .timeframe {
     display: block;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 5px;
-    color: #000000;
+    color: #FFC107; /* Vibrant warm gold for timeframes */
 }
 
+/* Job description styling */
 .job-description {
     margin-top: 10px;
     max-width: 1000px;
     font-size: 17px;
-    font-family: 'Courier New', Courier, monospace;
-    color: #000000;
-    line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff; /* Softer white for readability */
+    line-height: 1.7; /* Better spacing between lines */
 }
 
 /* Define the keyframes for sequential dot appearance */
@@ -80,8 +84,7 @@
 
 /* Style for animated dots */
 .animation-dots {
-    display: inline-block;
-    font-size: 1.5em;
+    color: #FFC107; /* Warm gold for animated dots */
 }
 
 .dot {
@@ -106,28 +109,31 @@
 .company-logo img {
     margin-top: 5px;
     height: auto;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling */
 }
 
 .company-logo img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1); /* Slight zoom on hover */
 }
 
+/* Responsive design for larger screens */
 @media (min-width: 1024px) {
     .job-entry,
     .animated-dots-container {
         margin-left: 290px; /* Adjusts margin for larger screens */
     }
     .company-logo img {
-        width: 15%;
+        width: 15%; /* Smaller logo width */
     }
 }
 
+/* Responsive design for smaller screens */
 @media (max-width: 1023px) {
-    .job-entry, 
+    .job-entry,
     .animated-dots-container {
         margin-left: 10%; /* Adjusts margin for smaller screens */
     }
     .company-logo img {
-        width: 30%;
+        width: 20%; /* Larger logo width */
     }
 }
