@@ -42,7 +42,7 @@ embed {
 }
 
 /* Media queries for responsiveness */
-@media (max-width: 1023px) {
+@media (max-width: 1200px) {
     .pdf-container {
         margin-left: 0;
     }
