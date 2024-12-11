@@ -17,7 +17,7 @@ function adjustMenuOnResize() {
     var menu = document.getElementById('verticalMenu');
     var toggle = document.querySelector('.menu-toggle');
     var pdfContainer = document.getElementById('pdfContainer');
-    if (window.innerWidth > 1023) {
+    if (window.innerWidth > 1200) {
         menu.classList.add('open');
         menu.style.transform = 'translateX(0%)'; // Keep menu open
         toggle.style.display = 'none'; // Hide toggle button

@@ -44,6 +44,6 @@ embed {
 /* Media queries for responsiveness */
 @media (max-width: 1023px) {
     .pdf-container {
-        margin-left: 0; /* No margin for PDF container on small screens */
+        margin-left: 0;
     }
 }
