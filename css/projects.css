@@ -1,0 +1,126 @@
+/* General Styles */
+#projects {
+    padding: 1rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    /* Center by default */
+    width: 100%;
+    /* Default to full width */
+    box-sizing: border-box;
+    /* Include padding in the width */
+}
+
+#projects h2 {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: #ebdd1b;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Grid Layout */
+.project-grid {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Individual Cards */
+.project-card {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Content */
+.project-card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.project-card h3 {
+    font-size: 1.25rem;
+    margin: 0.5rem 1rem 0;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    margin: 0.5rem 1rem 1rem;
+    color: #555;
+}
+
+/* For screens with a min width of 1024px */
+@media (min-width: 1024px) {
+    #projects {
+        margin-left: 250px;
+        /* Leave space for the menu */
+        width: calc(100% - 250px);
+        /* Adjust width to fit the remaining space */
+    }
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #eee;
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+    outline: 1px solid #eee;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
+    background-color: #ccc;
+}
+
+.swal2-icon {
+    width: 70px !important;
+    height: 70px !important;
+}
+
+.swal2-title {
+    margin-top: -20px !important;
+    margin-bottom: -20px !important;
+}
+
+.swal2-html-container {
+    text-align: left !important;
+    text-align: justify !important;
+}
+
+.swal2-html-container img {
+    align-items: center;
+}
+
+/* Default popup width for larger screens (laptops/desktops) */
+.swal2-popup.responsive-popup {
+    width: 50% !important;
+}
+
+/* Adjust popup width for mobile devices (max width 1023px) */
+@media (max-width: 1023px) {
+    .swal2-popup.responsive-popup {
+        width: 80% !important;
+    }
+}
